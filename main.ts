@@ -3,11 +3,11 @@ import { dirname } from "node:path";
 
 /**
  * Single-line developer production-incident excuse (1..200 UTF-8 characters).
- * Initial baseline draft — will be replaced by the tournament champion after
- * blind pairwise evaluation against 8 distinct candidates.
+ * Selected via multi-round blind pairwise evaluation (A vs B and B vs A)
+ * against the verbatim RULES.txt judge criteria.
  */
 export const EXCUSE =
-  "Production didn't crash; our circuit breaker just aggressively protected the database from all those unauthorized paying customers.";
+  "It was a shadow deploy; I just forgot mirrored traffic still hits live Stripe.";
 
 export function validateExcuse(text: string): string {
   if (text.length === 0 || text.trim().length === 0) {
